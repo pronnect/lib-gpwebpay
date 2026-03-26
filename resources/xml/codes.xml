@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codes>
+    <primaryReturnCodes>
+        <code value="0">OK</code>
+        <code value="1">Field too long</code>
+        <code value="2">Field too short</code>
+        <code value="3">Incorrect content of field</code>
+        <code value="4">Field is null</code>
+        <code value="5">Missing required field</code>
+        <code value="6">Missing field</code>
+        <code value="11">Unknown merchant</code>
+        <code value="14">Duplicate order number</code>
+        <code value="15">Object not found</code>
+        <code value="16">Amount to approve exceeds payment amount</code>
+        <code value="17">Amount to deposit exceeds approved amount</code>
+        <code value="18">Total sum of credited amounts exceeded deposited amount</code>
+        <code value="20">Object not in valid state for operation</code>
+        <code value="25">Operation not allowed for user</code>
+        <code value="26">Technical problem in connection to authorization center</code>
+        <code value="27">Incorrect payment type</code>
+        <code value="28">Declined in 3D</code>
+        <code value="30">Declined in AC</code>
+        <code value="31">Wrong digest</code>
+        <code value="32">Expired card</code>
+        <code value="33">Original/Master order was not authorized</code>
+        <code value="34">Original/Master order is not valid for subsequent payment</code>
+        <code value="35">Session expired</code>
+        <code value="37">Blacklisted card - the issuer has banned further use of this card</code>
+        <code value="38">Card not supported</code>
+        <code value="39">Watchlisted card - max 15 attempts allowed in the last 30 days</code>
+        <code value="40">Declined in Fraud detection systém</code>
+        <code value="46">Declined in Transaction analysis system (TRA)</code>
+        <code value="50">The cardholder canceled the payment</code>
+        <code value="80">Duplicate MessageId</code>
+        <code value="82">HSM key label missing</code>
+        <code value="83">Canceled by issuer</code>
+        <code value="84">Duplikate value</code>
+        <code value="85">Declined due to merchant’s rules</code>
+        <code value="200">Additional info request</code>
+        <code value="1000">Technical problem</code>
+    </primaryReturnCodes>
+    <secondaryReturnCode>
+        <code value="0"></code>
+        <code value="1">ORDERNUMBER</code>
+        <code value="2">MERCHANTNUMBER</code>
+        <code value="3">PAN</code>
+        <code value="4">EXPIRY</code>
+        <code value="5">CVV</code>
+        <code value="6">AMOUNT</code>
+        <code value="7">CURRENCY</code>
+        <code value="8">DEPOSITFLAG</code>
+        <code value="10">MERORDERNUM</code>
+        <code value="11">CREDITNUMBER</code>
+        <code value="12">OPERATION</code>
+        <code value="14">ECI</code>
+        <code value="18">BATCH</code>
+        <code value="22">ORDER</code>
+        <code value="24">URL</code>
+        <code value="25">MD</code>
+        <code value="26">DESC</code>
+        <code value="34">DIGEST</code>
+        <code value="43">ORIGINAL ORDER NUMBER</code>
+        <code value="45">USERPARAM</code>
+        <code value="70">VRCODE</code>
+        <code value="71">USERPARAM</code>
+        <code value="71">FASTPAYID</code>
+        <code value="73">PAYMETHOD</code>
+        <code value="83">ADDINFO</code>
+        <code value="84">MPS_CHECKOUT_ID</code>
+        <code value="86">PAYMETHODS</code>
+        <code value="88">DEPOSIT_NUMBER</code>
+        <code value="89">RECURRING_ORDER</code>
+        <code value="90">PAIRING</code>
+        <code value="91">SHOP_ID</code>
+        <code value="92">PANPATTERN</code>
+        <code value="93">TOKEN</code>
+        <code value="95">FASTTOKEN</code>
+        <code value="96">SUBMERCHANT INFO</code>
+        <code value="97">TOKEN_HSM_LABEL</code>
+        <code value="98">CUSTOM INSTALLMENT COUNT</code>
+        <code value="99">COUNTRY</code>
+        <code value="100">TERMINAL INFO</code>
+        <code value="101">TERMINAL ID</code>
+        <code value="102">TERMINAL OWNER</code>
+        <code value="103">TERMINAL CITY</code>
+        <code value="104">MC ASSIGNED ID</code>
+        <code value="300">Soft decline – issuer requires SCA</code>
+        <code value="3000">Declined in 3D. Cardholder not authenticated in 3D.
+            Note: Cardholder authentication failed (wrong password, transaction canceled, authentication window was closed…).
+            Transaction Declined.</code>
+        <code value="3001">Authenticated
+            Note: Cardholder was successfully authenticated – transaction continue with authorization.</code>
+        <code value="3002">Not Authenticated in 3D. Issuer or Cardholder not participating in 3D.
+            Note: Cardholder wasn’t authenticated – Issuer or Cardholder not participating in 3D.
+            Transaction can continue.</code>
+        <code value="3004">Not Authenticated in 3D. Issuer not participating or Cardholder not enrolled.
+            Note: Cardholder wasn’t authenticated – Cardholder not enrolled or Issuer or not participating in 3D.
+            Transaction can continue.</code>
+        <code value="3005">Declined in 3D. Technical problem during Cardholder authentication.
+            Note: Cardholder authentication unavailable – issuer not supporting 3D or technical problem in communication between associations and Issuer 3D systems.
+            Transaction cannot continue.</code>
+        <code value="3006">Declined in 3D. Technical problem during Cardholder authentication.
+            Note: Technical problem during cardholder authentication – merchant authentication failed or technical problem in communication between association and acquirer.
+            Transaction cannot continue.</code>
+        <code value="3007">Declined in 3D. Acquirer technical problem. Contact the merchant.
+            Note: Technical problem during cardholder authentication – 3D systems technical problem.
+            Transaction cannot continue.</code>
+        <code value="3008">Declined in 3D. Unsupported card product.
+            Note: Card not supported in 3D.
+            Transaction cannot continue.</code>
+        <code value="1001">Declined in AC, Card blocked It includes reasons that indicate misuse of t It includes reasons that indicate misuse of the payment card - stolen card, suspected fraud, lost card, etc.
+            The card is marked as:
+            Lost
+            To be detained
+            To be detained (special reasons)
+            Stolen
+            Usually an attempted fraudulent transaction.</code>
+        <code value="1002">Declined in AC, Declined
+            The "Do not honor" rejection reason was returned from the authorization.
+            The publisher or financial association rejected the authorization WITHOUT giving a reason.</code>
+        <code value="1003">Declined in AC, Card problem
+            Includes reasons:
+            Expired card, incorrect card number, card settings - no internet use allowed for card, unauthorized card, expired card, invalid card, invalid card number, amount exceeds maximum card limit, invalid CVC/CVV, invalid card number length, invalid expiration date, PIN check required for card.</code>
+        <code value="1004">Declined in AC, Technical problem in authorization  process
+            Authorization cannot be performed for technical reasons - technical problems in the card issuer's system or financial associations and financial processors.</code>
+        <code value="1005">Declined in AC, Account problem
+            Reasons: insufficient funds in the account, limits exceeded, maximum number of uses...</code>
+        <code value="1012">Declined in AC, Blacklisted card
+            The issuer has banned further use of this card</code>
+        <code value="1013">Declined in AC, Watchlisted card
+            Max 15 attempts allowed in the last 30 days</code>
+    </secondaryReturnCode>
+</codes>

@@ -1,0 +1,42 @@
+<?php
+declare(strict_types=1);
+
+namespace Pronnect\GpWebPayTest\Unit\Request;
+
+use PHPUnit\Framework\TestCase;
+use Pronnect\GpWebPay\Request\BatchCloseRequest;
+use Pronnect\GpWebPayApi\DigestInterface;
+
+/**
+ * @covers \Pronnect\GpWebPay\Request\BatchCloseRequest
+ */
+class BatchCloseRequestTest extends TestCase
+{
+    public function testGetDigestWithAllFields(): void
+    {
+        $request = new BatchCloseRequest();
+        $request->setMessageId('msg-1')
+            ->setProvider('0300')
+            ->setMerchantNumber('merchant-001');
+
+        $expected = implode(DigestInterface::DIGEST_SEPARATOR, [
+            'msg-1',
+            '0300',
+            'merchant-001',
+        ]);
+
+        $this->assertSame($expected, $request->getDigest());
+    }
+
+    public function testGetDigestReturnsNullWhenEmpty(): void
+    {
+        $this->assertNull((new BatchCloseRequest())->getDigest());
+    }
+
+    public function testMagicGetSet(): void
+    {
+        $request = new BatchCloseRequest();
+        $request->messageId = 'msg-x';
+        $this->assertSame('msg-x', $request->messageId);
+    }
+}
